@@ -1,0 +1,40 @@
+.header{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  //flex-direction: row;
+  //align-items: center;
+  //justify-items: center;
+  //justify-content: space-between;
+  align-items: center;
+  max-width: 100vw;
+  min-height: 70px;
+  padding: 0 15px;
+
+  background: linear-gradient(to right, #3E3BBD,30%, #060D26, 60%, #000000);
+
+  &__left{
+
+  }
+  &__logo{
+
+  }
+  &__right{
+    display: grid;
+    grid-template-columns: auto;
+
+  }
+  &__navigationBar{
+
+  }
+  &__navigationContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+  &__navLinks{
+    color: #f9f9f9;
+  }
+
+}

@@ -1,11 +1,15 @@
 import { useState } from 'react'
+import {useRoutes} from "react-router-dom";
+import routes from "./router/index.jsx";
+import {Header} from "./components/basic/Header.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
+    const router = useRoutes(routes);
 
   return (
     <>
-        <div>INIT</div>
+        <Header/>
+        {router}
     </>
   )
 }
