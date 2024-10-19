@@ -2,8 +2,10 @@ import {Link} from "react-router-dom";
 import router from "../../router/index.jsx";
 import header from "./header.module.scss"
 import { Logo } from "./Logo.jsx"
+import UseMenu from "../../hooks/menu/UseMenu.jsx";
 
 export const Header = () => {
+    const menu = UseMenu(router)
     return (
         <>
             <div className={header.header}>
@@ -14,14 +16,9 @@ export const Header = () => {
                 </div>
 
                 <div className={header.header__right}>
-                    <div className={header.header__navigationBar}>
-                        <nav className={header.header__navigationContainer}>
-                            {router.map((item, index)=>(
-                                <Link className={header.header__navLinks} to={item.path} key={index}>{item.name}</Link>
-                                ))
-                            }
-                        </nav>
-                    </div>
+                    <nav className={header.header__navigationContainer}>
+                        {menu}
+                    </nav>
                 </div>
 
             </div>
