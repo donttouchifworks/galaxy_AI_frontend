@@ -11,21 +11,21 @@ export const authRoutes = {
     children: [
         {
             path: '',
-            name: 'Login | Register',
+            name: 'Signup',
             element: <Navigate to="/auth/login" />,
-            showInMenu: true,
+            showInMenu: false,
         },
         {
             path: 'login',
             name: 'login',
             element: <Login />,
-            showInMenu: false,
+            showInMenu: true,
         },
         {
             path: 'signup',
             name: 'signup',
             element: <Signup/>,
-            showInMenu: false,
+            showInMenu: true,
         }
     ]
 }

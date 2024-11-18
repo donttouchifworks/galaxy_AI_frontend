@@ -18,7 +18,7 @@ const router = [
     },
     authRoutes,
     {
-        path: "*",
+        path: "/*",
         element: <NotFoundPage />,
         showInMenu: false,
     }
